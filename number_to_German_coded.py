@@ -15,7 +15,6 @@ def num2GermanStyle():
     h = int(hun)
     t = int(thou) % 10 if thou is not None else None
     t1 = ma.floor(int(thou) / 10) if thou is not None else None
-    print(t,t1,n[t],m[t1])
 
     p1 = f"{n[t]} and {m[t1]} Thousand" if str(a[-4]) != '0' and thou is not None and len(a) > 4  else f"{n[t]} Thousand" if thou is not None and len(a) == 4 else ''
     #p2 = f"{m[t1]} Thousand" if thou is not None else ''
@@ -25,7 +24,8 @@ def num2GermanStyle():
     print(f"{p1} {p2}{n[int(ones)]} {p3}" )
 
 if len(a) >= 4:
-    num2GermanStyle()
+    if __name__ == '__main__':
+        num2GermanStyle()
 
 else:
    print( "Wrong Input")
