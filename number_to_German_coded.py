@@ -1,12 +1,12 @@
 def num2GermanStyle(a: str):
     import math as ma
     
-    ones=str(a[-1]) if a[-1] !=0 else None
-    tens=str(a[-2])
+    ones=int(a[-1]) if a[-1] !=0 else None
+    tens=int(a[-2])
 
-    hun = str(a[-3]) if a[-3] !=0 and len(a) >=3 else None
+    hun = int(a[-3]) if a[-3] !=0 and len(a) >=3 else None
 
-    thou= str(a[-5:-3]) if len(a) >=4 else None
+    thou= int(a[-5:-3]) if len(a) >=4 else None
 
     m = [' ','Ten','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety']
     n = [' ','One','Two','Three','Four','Five','Six','Seven','Eight','Nine']
