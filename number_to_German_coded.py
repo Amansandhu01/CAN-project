@@ -1,7 +1,6 @@
-import math as ma
-a = input("Enter a Four or Five digit number: ") 
-
-def num2GermanStyle(a):
+def num2GermanStyle(a: str):
+    import math as ma
+    
     ones=str(a[-1]) if a[-1] !=0 else None
     tens=str(a[-2])
 
@@ -23,6 +22,7 @@ def num2GermanStyle(a):
 
     print(f"{p1} {p2}{n[int(ones)]} {p3}" )
 
+a = input("Enter a Four or Five digit number: ") 
 if len(a) >= 4:
     if __name__ == '__main__':
         num2GermanStyle(a)
