@@ -1,7 +1,7 @@
 import math as ma
-a = "77707"
+a = input("Enter a Four or Five digit number: ") 
 
-def num2GermanStyle():
+def num2GermanStyle(a):
     ones=str(a[-1]) if a[-1] !=0 else None
     tens=str(a[-2])
 
@@ -25,7 +25,7 @@ def num2GermanStyle():
 
 if len(a) >= 4:
     if __name__ == '__main__':
-        num2GermanStyle()
+        num2GermanStyle(a)
 
 else:
    print( "Wrong Input")
