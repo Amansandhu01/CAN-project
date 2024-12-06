@@ -17,7 +17,7 @@ def num2GermanStyle(a: str):
 
     p1 = f"{n[t]} and {m[t1]} Thousand" if str(a[-4]) != '0' and thou is not None and len(a) > 4  else f"{n[t]} Thousand" if thou is not None and len(a) == 4 else ''
     #p2 = f"{m[t1]} Thousand" if thou is not None else ''
-    p2 = f"{n[h]} hundred, " if str(a[2]) != '0' else ''
+    p2 = f"{n[h]} hundred, " if str(a[-3]) != '0' else ''
     p3 = f"and {m[int(tens)]}" if str(a[-2]) != '0' else ''
 
     print(f"{p1} {p2}{n[int(ones)]} {p3}" )
